@@ -5,7 +5,7 @@ type Props = {}
 
 export default function Navbar({}: Props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5">
+    <nav className="navbar navbar-expand-lg navbar-light ps-5 pe-5" style={{backgroundColor: "#ddd"}}>
     <Link className="navbar-brand ms-5" to="/">tdagci</Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
