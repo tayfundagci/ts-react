@@ -1,6 +1,4 @@
 import "./App.css";
-import AlertDismissible from "./components/AlertDismissible";
-import { Button } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
