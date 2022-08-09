@@ -38,6 +38,7 @@ function Home({}: Props) {
         <div className="row" style={{ minHeight: "100px" }}>
           {products.map((product: iProductType) => (
             <BootstrapCard
+              brand={product.brand}
               key={product.id}
               title={`${product.title}`}
               description={`${product.description}`}

@@ -7,9 +7,10 @@ type Props = {
   description: string;
   image: string;
   price: number | string;
+  brand: string;
 };
 
-const BootstrapCard = ({ title, description, image, price }: Props) => {
+const BootstrapCard = ({ title, description, image, price, brand }: Props) => {
   return (
     <Card style={{ width: "18rem" }} className="bg-secondary border m-2 p-3">
       <Card.Img
@@ -19,8 +20,11 @@ const BootstrapCard = ({ title, description, image, price }: Props) => {
         style={{ maxHeight: "150px" }}
       />
       <Card.Body>
-        <Card.Title className="text-white">{title}</Card.Title>
+        <Card.Title className="text-white">
+          {brand} <hr /> {title}
+        </Card.Title>
         <Card.Text className="text-white">
+          <hr />
           {description.slice(0, 40) + "..."}
         </Card.Text>
         <Button
