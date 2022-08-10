@@ -33,3 +33,13 @@ export interface iOrderCard {
   onSelect: () => void;
   onDelete: () => void;
 }
+
+interface iButtonOpacityProps {
+  onClick: () => void;
+  onChange: () => void;
+}
+
+export interface iButtonProps extends iButtonOpacityProps {
+  title: string;
+  loading: boolean;
+}

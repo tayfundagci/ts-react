@@ -1,5 +1,6 @@
 import React from "react";
 import BootstrapModal from "../components/BootstrapModal";
+import { Button } from "../components/Button";
 import { OrderCard } from "../components/OrderCard";
 import { iPerson } from "../interfaces/Interfaces";
 
@@ -19,9 +20,18 @@ function About({ }: Props) {
   user.walk();
   user.speak(" What's up");
 
+  const handleSubmit = () => {
+    alert("clicked")
+  }
+
+  const handleChange = () => {
+
+  }
+
   return (
     <div className="m-5">
-      <BootstrapModal title="farukyilmaz" titleNumber={23} description="Eu cupidatat nostrud proident aliqua veniam enim adipisicing cupidatat incididunt do." />
+      <BootstrapModal title="farukyilmaz" titleNumber={23} description="Eu cupidatat nostrud proident aliqua veniam enim adipisicing cupidatat incididunt do." /> <hr />
+      <Button title="click" loading={false} onClick={handleSubmit} onChange={handleChange} />
     </div>
   );
 }
