@@ -32,6 +32,7 @@ function About({ }: Props) {
     <div className="m-5">
       <BootstrapModal title="farukyilmaz" titleNumber={23} description="Eu cupidatat nostrud proident aliqua veniam enim adipisicing cupidatat incididunt do." /> <hr />
       <Button title="click" loading={false} onClick={handleSubmit} onChange={handleChange} />
+      <span>test message</span>
     </div>
   );
 }
