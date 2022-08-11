@@ -43,3 +43,13 @@ export interface iButtonProps extends iButtonOpacityProps {
   title: string;
   loading: boolean;
 }
+
+export interface iAppContextInterface {
+  name: string;
+  author: string;
+  url: string;
+}
+
+export interface iContextState {
+  name: string | null;
+}

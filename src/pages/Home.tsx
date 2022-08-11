@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import AlertDismissible from "../components/AlertDismissible";
 import BootstrapModal from "../components/BootstrapModal";
 import Counter from "../components/Counter";
 import axios from "axios";
 import { iProductType } from "../interfaces/Interfaces";
 import BootstrapCard from "../components/BootstrapCard";
+import { AppCtx } from "../context/AppContextInterface";
+
 
 type Props = {};
 
 function Home({ }: Props) {
+  const appContext = useContext(AppCtx)
+
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -35,6 +39,7 @@ function Home({ }: Props) {
               price={`$ ${product.price}`}
             />
           ))}
+          <span>Name: {appContext?.name}, <br /> Author: {appContext?.author}, <br /> Url: {appContext?.url}</span>
         </div>
       </div>
     </div>

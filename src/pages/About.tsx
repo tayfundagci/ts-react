@@ -3,10 +3,15 @@ import BootstrapModal from "../components/BootstrapModal";
 import { Button } from "../components/Button";
 import { OrderCard } from "../components/OrderCard";
 import { iPerson } from "../interfaces/Interfaces";
+import { useContext } from "react"
+import { AppCtx } from "../context/AppContextInterface";
+import { currentUserContext } from "../context/ContextExtended";
 
 type Props = {};
 
 function About({ }: Props) {
+  const appContext = useContext(AppCtx)
+
   const user: iPerson = {
     name: "gokalpavcu",
     age: 23,
@@ -28,11 +33,13 @@ function About({ }: Props) {
 
   }
 
+  const currentUser = useContext(currentUserContext);
+
   return (
     <div className="m-5">
       <BootstrapModal title="farukyilmaz" titleNumber={23} description="Eu cupidatat nostrud proident aliqua veniam enim adipisicing cupidatat incididunt do." /> <hr />
       <Button title="click" loading={false} onClick={handleSubmit} onChange={handleChange} />
-      <span>test message 2</span>
+      <span>Name: {appContext?.name}, <br /> Author: {appContext?.author}, <br /> Url: {appContext?.url}</span> <br />
     </div>
   );
 }
